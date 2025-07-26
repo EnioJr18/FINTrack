@@ -2,9 +2,6 @@
 
 ### FINTrack é um aplicativo de linha de comando construído em Python que automatiza o processo tedioso de baixar, processar e categorizar transações financeiras de extratos bancários. O projeto foi desenvolvido para transformar a tarefa manual de organizar finanças em planilhas em um fluxo de trabalho automatizado e eficiente.
 
-#### 🚀 Demonstração em Ação
-Abaixo, um GIF demonstra a capacidade de automação do projeto em um ambiente real, interagindo com a interface de um site para realizar o download do extrato. (Com dados sensíveis devidamente borrados).
-
 #### ✨ Principais Funcionalidades
 Banco de Dados Robusto: Utiliza SQLAlchemy e um banco de dados SQLite para persistir todas as transações, categorias e contas de forma estruturada.
 
@@ -23,19 +20,23 @@ O projeto foi construído utilizando as seguintes tecnologias:
 * PyAutoGUI: Para automação de interface gráfica (GUI), simulando cliques e digitação.
 * SQLite: Banco de dados relacional embarcado, ideal para aplicações locais.
 
+  #### 👀 Observação
+* Utilizando o navegardor Chrome como exmeplo
+* No código(mais especificamente no arquivo main.py) da kinha 18 à 36 e 48 à 49, estam com "#", por que caso o site não esteja funcionando, o programa criará um arquivo .csv para fins de exmplo(Claro, já deixei esse arquivo tanto no Falso Site, como aqui no GitHub).
+
 #### 📂 Estrutura do Projeto
 /fintrack/ <br>
 | <br>
-|-- main.py             # Ponto de entrada, orquestra os outros módulos <br>
-|-- database.py         # Configuração da conexão e sessão do SQLAlchemy <br>
-|-- models.py           # Definição das tabelas do banco de dados (ORM) <br>
-|-- processing.py       # Lógica para processar o CSV e popular o banco <br>
-|-- reports.py          # Funções para gerar relatórios a partir do banco <br>
+|-- main.py                Ponto de entrada, orquestra os outros módulos <br>
+|-- database.py           # Configuração da conexão e sessão do SQLAlchemy <br>
+|-- models.py             # Definição das tabelas do banco de dados (ORM) <br>
+|-- processing.py         # Lógica para processar o CSV e popular o banco <br>
+|-- reports.py            # Funções para gerar relatórios a partir do banco <br>
 | <br>
-|-- extrato_exemplo.csv # Arquivo de exemplo usado pelo programa <br>
-|-- fintrack.db         # Arquivo do banco de dados SQLite (gerado na execução) <br>
-|-- requirements.txt    # Lista de dependências do projeto <br>
-|-- README.md           # Este arquivo <br>
+|-- extrato_exemplo.csv   # Arquivo de exemplo usado pelo programa <br>
+|-- fintrack.db           # Arquivo do banco de dados SQLite (gerado na execução) <br>
+|-- requirements.txt      # Lista de dependências do projeto <br>
+|-- README.md             # Este arquivo <br>
 
 #### ⚙️ Configuração e Instalação
 Siga os passos abaixo para executar o projeto em sua máquina local.
