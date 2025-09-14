@@ -99,7 +99,7 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE] para 
 
 LinkedIn: https://www.linkedin.com/in/enioeduardojr
 
-Instagram: enio_junior100
+Instagram: https://www.instagram.com/enio_junior100
 
 Email: eniojr100@gmail.com.com
 
