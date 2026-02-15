@@ -10,7 +10,7 @@
 
 ## 📸 Demonstração
 
-![Demo do FINTrack](https://github.com/seu-usuario/fintrack/assets/demo.gif)
+<img width="600" height="550" alt="Image" src="https://github.com/user-attachments/assets/ace68fad-66a4-47e1-acc0-d8d2b0857dde" />
 
 ---
 
@@ -18,7 +18,7 @@
 
 Diferente de scripts de automação comuns, o **FINTrack** foi construído seguindo princípios de Engenharia de Software, utilizando uma **Arquitetura em Camadas (Layered Architecture)** para garantir desacoplamento, testabilidade e escalabilidade.
 
-```mermaid
+```bash
 graph TD
     User((Usuário))
     CLI[Interface CLI (Typer/Rich)]
