@@ -35,8 +35,8 @@ graph TD
 
 ## 🧩 Padrões Utilizados:
 
-- **Repository Pattern:** A camada de acesso a dados (repositories.py) abstrai todas as queries SQL. O restante da aplicação desconhece a existência do banco de dados.
-- **Service Pattern:** A camada de serviço (services.py) encapsula as regras de negócio (categorização automática, prevenção de duplicatas, cálculos de saldo).
+- **Repository Pattern:** A camada de acesso a dados (`fintrack/repositories/transaction_repository.py`) abstrai todas as queries SQL. O restante da aplicação desconhece a existência do banco de dados.
+- **Service Pattern:** A camada de serviço (`fintrack/services/transaction_service.py`) encapsula as regras de negócio (categorização automática, prevenção de duplicatas, cálculos de saldo).
 - **Dependency Injection:** Os repositórios são injetados nos serviços, facilitando a criação de testes unitários.
 
 ## ✨ Funcionalidades Principais
@@ -49,7 +49,7 @@ graph TD
     - Extrato detalhado com formatação condicional (Verde/Vermelho).
     - Agrupamento de gastos por categoria.
     - Cálculo automático de balanço e saldo.
-- **Automação Web (RPA):** Módulo demonstrativo (automation.py) utilizando PyAutoGUI para simular a navegação e download de extratos em sites bancários.
+- **Automação Web (RPA):** Módulo demonstrativo (`fintrack/automation/browser_automation.py`) utilizando PyAutoGUI para simular a navegação e download de extratos em sites bancários.
 
 ## 🛠️ Tech Stack
 
@@ -97,7 +97,7 @@ O FINTrack funciona através de comandos no terminal.
 📥1. **Importar Extrato**
 Importe um arquivo CSV. O sistema irá ler, verificar duplicatas e categorizar automaticamente.
 ```bash
-python main.py importar extrato_exemplo.csv
+python main.py importar data/extrato_exemplo.csv
 ```
 📊2. **Ver Extrato Geral**
 ```bash
@@ -119,21 +119,35 @@ pytest
 
 ## 📂 Estrutura do Projeto
 ```bash
-/fintrack
-│
-├── main.py              # Entry Point: Interface CLI e Comandos
-├── services.py          # Camada de Serviço (Regras de Negócio)
-├── repositories.py      # Camada de Repositório (Queries SQL)
-├── models.py            # Modelos do Banco de Dados (ORM)
-├── database.py          # Configuração da Conexão DB
-├── settings.py          # Configurações e Mapa de Categorias
-├── automation.py        # Script de Automação RPA (Demo)
-│
-├── tests/               # Testes Unitários
-│   └── test_financeiro.py
-│
-├── extrato_exemplo.csv  # Arquivo para teste
-└── requirements.txt     # Dependências do projeto
+FINTrack/
+|-- fintrack/
+|   |-- cli/
+|   |   `-- main.py
+|   |-- core/
+|   |   `-- settings.py
+|   |-- database/
+|   |   |-- connection.py
+|   |   `-- models.py
+|   |-- repositories/
+|   |   `-- transaction_repository.py
+|   |-- services/
+|   |   |-- transaction_service.py
+|   |   `-- report_service.py
+|   |-- processing/
+|   |   `-- csv_processor.py
+|   |-- reports/
+|   |   `-- console_reports.py
+|   `-- automation/
+|       |-- browser_automation.py
+|       `-- mouse_position.py
+|-- tests/
+|-- data/
+|   `-- extrato_exemplo.csv
+|-- main.py
+|-- requirements.txt
+|-- README.md
+|-- LICENSE
+`-- .gitignore
 ```
 
 
@@ -150,3 +164,4 @@ Desenvolvido por **Enio Jr** para fins de estudo de Backend e portfólio 💻.
 📧 Entre em contato: eniojr100@gmail.com <br>
 🔗 LinkedIn: https://www.linkedin.com/in/enioeduardojr/ <br>
 📷 Instagram: https://www.instagram.com/enio_juniorrr/ <br>
+🌐 Site Portfólio: https://eniojr18.github.io

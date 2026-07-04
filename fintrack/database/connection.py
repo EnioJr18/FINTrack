@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine # type: ignore
 from sqlalchemy.orm import sessionmaker # type: ignore
-from models import Base
+from fintrack.database.models import Base
 
 DATABASE_URL = "sqlite:///.fintrack.db"
 

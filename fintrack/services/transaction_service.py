@@ -1,8 +1,8 @@
 import pandas as pd
 from sqlalchemy.orm import Session
-from models import Transacao, Categoria, Conta
-from repositories import TransacaoRepository, CategoriaRepository, ContaRepository
-from settings import MAPA_CATEGORIAS, CATEGORIA_PADRAO 
+from fintrack.database.models import Transacao, Categoria, Conta
+from fintrack.repositories.transaction_repository import TransacaoRepository, CategoriaRepository, ContaRepository
+from fintrack.core.settings import MAPA_CATEGORIAS, CATEGORIA_PADRAO
 
 class FinanceiroService:
     def __init__(self, db: Session):

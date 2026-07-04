@@ -1,8 +1,8 @@
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Base, Categoria, Conta, Transacao
-from services import FinanceiroService
+from fintrack.database.models import Base, Categoria, Conta, Transacao
+from fintrack.services.transaction_service import FinanceiroService
 from datetime import date
 
 # --- Configuração do Banco de Teste (Na Memória RAM) ---

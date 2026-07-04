@@ -1,10 +1,15 @@
-# Ambientes Virtuais
+# Ambientes virtuais
 .venv/
 venv/
 
-# Arquivos compilados e cache do Python
+# Python
 __pycache__/
+.pytest_cache/
 *.pyc
 
-# Arquivos de ambiente (se você usar)
+# Banco de dados local
+.fintrack.db
+*.db
+
+# Ambiente
 .env

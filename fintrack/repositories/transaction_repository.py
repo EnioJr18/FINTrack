@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import func, text
-from models import Transacao, Categoria, Conta
+from fintrack.database.models import Transacao, Categoria, Conta
 from datetime import date
 
 class TransacaoRepository:
